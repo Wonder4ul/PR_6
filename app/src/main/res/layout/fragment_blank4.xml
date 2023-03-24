@@ -86,6 +86,13 @@
                 android:layout_height="wrap_content"
                 android:text="добавить в библиотеку"
                 android:backgroundTint="@color/button_back" />
+
+            <Button
+                android:id="@+id/serviceButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="запуск службы"
+                android:backgroundTint="@color/button_back" />
         </LinearLayout>
 
 

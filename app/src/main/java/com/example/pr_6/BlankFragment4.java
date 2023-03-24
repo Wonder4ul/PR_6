@@ -5,6 +5,7 @@ import static androidx.core.content.ContextCompat.getSystemService;
 import android.app.NotificationChannel;
 import android.app.NotificationManager;
 import android.content.Context;
+import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -66,6 +67,14 @@ public class BlankFragment4 extends Fragment {
                         //.setPriority(NotificationCompat.PRIORITY_DEFAULT);
                 NotificationManagerCompat managerCompat = NotificationManagerCompat.from(getContext());
                 managerCompat.notify(1, builder.build());
+            }
+        });
+
+        Button serviceButton = view.findViewById(R.id.serviceButton);
+        serviceButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                getActivity().startService(new Intent(getActivity(), ApplicationService.class));
             }
         });
     }
